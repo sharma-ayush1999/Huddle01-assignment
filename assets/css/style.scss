@@ -12,15 +12,18 @@ html {
   background: $bgColor-dark;
   height: 100%;
   .container {
-    padding: 4vw;
+    padding: 4vw 6vw;
     .box {
       margin-top: 9vh;
+      height: 40vh;
+      display: flex;
+      justify-content: space-between;
       .left {
-        width: 45%;
+        width: 46%;
         .left-container {
           background: $bgColor-medium;
           width: 100%;
-          height: 40vh;
+          height: 100%;
           .video-placeholder {
             display: flex;
             justify-content: center;
@@ -53,8 +56,115 @@ html {
                 color: $fontColor-gray;
                 display: flex;
                 align-items: center;
+                font-size: 0.9vw;
               }
             }
+          }
+        }
+      }
+      .right {
+        width: 46%;
+        .right-container {
+          margin: 0 auto;
+          .right-header {
+            h2 {
+              background: -webkit-linear-gradient(#303af9, #cd2ec2);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              font-size: 2em;
+            }
+            p {
+              color: $fontColor-gray;
+              font-size: 0.9em;
+              text-align: left;
+            }
+          }
+          .right-body {
+            margin-top: 4vh;
+            form {
+              label {
+                color: $fontColor-gray;
+              }
+              input {
+                color: $fontColor-light;
+                margin-bottom: 1vh;
+                margin-top: 0.6vh;
+                width: 95%;
+                padding: 1vw;
+                border-radius: 5px;
+                border-width: 0;
+                background: $bgColor-medium1;
+              }
+              button {
+                background-image: linear-gradient(to right, #303af9, #cd2ec2);
+                border: none;
+                padding: 1vw;
+                width: 100%;
+                border-radius: 5px;
+                margin-top: 4vh;
+                color: $fontColor-light;
+                font-weight: 500;
+                font-size: 1vw;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .logo-container {
+    img {
+      width: 29vw;
+    }
+  }
+  .box {
+    display: block !important;
+    margin-top: 3vh !important;
+    .left,
+    .right {
+      width: 100% !important;
+      margin-top: 2vh;
+    }
+    .left {
+      height: 40vh;
+      .left-bottom {
+        padding: 1.5vw 15% 1.5vw 15% !important;
+        .left-bottom_items {
+          p {
+            font-size: 3vw !important;
+          }
+        }
+      }
+    }
+    .right {
+      margin-top: 9vh;
+      .right-header {
+        text-align: center;
+        h2 {
+          font-size: 1.5em !important;
+        }
+        p {
+          font-size: 0.6em !important;
+          text-align: center !important;
+        }
+      }
+      .right-body {
+        margin-top: 1vh !important;
+        form {
+          input {
+            margin-bottom: 0.1vh !important;
+            margin-top: 0.1vh !important;
+            padding: 3.3vw !important;
+            width: 93% !important;
+          }
+          button {
+            padding: 3.3vw !important;
+            margin-top: 2vh;
+            font-size: 3.2vw !important;
+            width: 100% !important;
           }
         }
       }

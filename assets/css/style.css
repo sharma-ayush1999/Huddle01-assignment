@@ -19,21 +19,28 @@ html {
 }
 
 #main .container {
-  padding: 4vw;
+  padding: 4vw 6vw;
 }
 
 #main .container .box {
   margin-top: 9vh;
+  height: 40vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 #main .container .box .left {
-  width: 45%;
+  width: 46%;
 }
 
 #main .container .box .left .left-container {
   background: #0c0c0c;
   width: 100%;
-  height: 40vh;
+  height: 100%;
 }
 
 #main .container .box .left .left-container .video-placeholder {
@@ -90,5 +97,111 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-size: 0.9vw;
+}
+
+#main .container .box .right {
+  width: 46%;
+}
+
+#main .container .box .right .right-container {
+  margin: 0 auto;
+}
+
+#main .container .box .right .right-container .right-header h2 {
+  background: -webkit-linear-gradient(#303af9, #cd2ec2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2em;
+}
+
+#main .container .box .right .right-container .right-header p {
+  color: #434343;
+  font-size: 0.9em;
+  text-align: left;
+}
+
+#main .container .box .right .right-container .right-body {
+  margin-top: 4vh;
+}
+
+#main .container .box .right .right-container .right-body form label {
+  color: #434343;
+}
+
+#main .container .box .right .right-container .right-body form input {
+  color: #fff;
+  margin-bottom: 1vh;
+  margin-top: 0.6vh;
+  width: 95%;
+  padding: 1vw;
+  border-radius: 5px;
+  border-width: 0;
+  background: #161616;
+}
+
+#main .container .box .right .right-container .right-body form button {
+  background-image: -webkit-gradient(linear, left top, right top, from(#303af9), to(#cd2ec2));
+  background-image: linear-gradient(to right, #303af9, #cd2ec2);
+  border: none;
+  padding: 1vw;
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 4vh;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1vw;
+}
+
+@media only screen and (max-width: 720px) {
+  .logo-container img {
+    width: 29vw;
+  }
+  .box {
+    display: block !important;
+    margin-top: 3vh !important;
+  }
+  .box .left,
+  .box .right {
+    width: 100% !important;
+    margin-top: 2vh;
+  }
+  .box .left {
+    height: 40vh;
+  }
+  .box .left .left-bottom {
+    padding: 1.5vw 15% 1.5vw 15% !important;
+  }
+  .box .left .left-bottom .left-bottom_items p {
+    font-size: 3vw !important;
+  }
+  .box .right {
+    margin-top: 9vh;
+  }
+  .box .right .right-header {
+    text-align: center;
+  }
+  .box .right .right-header h2 {
+    font-size: 1.5em !important;
+  }
+  .box .right .right-header p {
+    font-size: 0.6em !important;
+    text-align: center !important;
+  }
+  .box .right .right-body {
+    margin-top: 1vh !important;
+  }
+  .box .right .right-body form input {
+    margin-bottom: 0.1vh !important;
+    margin-top: 0.1vh !important;
+    padding: 3.3vw !important;
+    width: 93% !important;
+  }
+  .box .right .right-body form button {
+    padding: 3.3vw !important;
+    margin-top: 2vh;
+    font-size: 3.2vw !important;
+    width: 100% !important;
+  }
 }
 /*# sourceMappingURL=style.css.map */
