@@ -1,0 +1,94 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.logo-container img {
+  width: 14vw;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+#main {
+  background: #000;
+  height: 100%;
+}
+
+#main .container {
+  padding: 4vw;
+}
+
+#main .container .box {
+  margin-top: 9vh;
+}
+
+#main .container .box .left {
+  width: 45%;
+}
+
+#main .container .box .left .left-container {
+  background: #0c0c0c;
+  width: 100%;
+  height: 40vh;
+}
+
+#main .container .box .left .left-container .video-placeholder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+#main .container .box .left .left-container .video-placeholder div {
+  width: 21vh;
+  height: 21vh;
+  border-radius: 50%;
+  background: #161616;
+}
+
+#main .container .box .left .left-container .left-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 1vw 21% 1vw 27%;
+  margin: 0 auto;
+  position: relative;
+  background: #161616;
+}
+
+#main .container .box .left .left-container .left-bottom .left-bottom_items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+#main .container .box .left .left-container .left-bottom .left-bottom_items img {
+  padding: 0.2vw;
+  margin-right: 0.5vw;
+  border: 1.5px solid #9333d6;
+  border-radius: 3px;
+}
+
+#main .container .box .left .left-container .left-bottom .left-bottom_items p {
+  color: #434343;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=style.css.map */
