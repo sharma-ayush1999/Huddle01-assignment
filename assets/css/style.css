@@ -15,7 +15,7 @@ html {
   overflow: hidden;
 }
 
-input:focus {
+input:focus, button:focus {
   outline: none;
 }
 
