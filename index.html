@@ -25,30 +25,112 @@
           <div class="left">
             <div class="left-container">
               <div class="video-placeholder">
-
-                  <video id="video" autoplay></video>
-
+                <video id="video" autoplay></video>
               </div>
               <div class="left-bottom">
                 <div class="left-bottom_items">
                   <img
-                    onclick="switchState(document.getElementById('cameraIcon'), 'video')"
+                    onclick="cameraAudioToggleState(document.getElementById('cameraIcon'), 'video')"
                     class="onClass"
                     id="cameraIcon"
                     src="./assets/img/videoOn.png"
                     alt="camera"
                   />
-                  <p>Camera Settings</p>
+                  <p
+                    class="settingsClass"
+                    id="cameraSettings"
+                    onclick="showDropdown(document.getElementById('cameraDropdown'),
+                    document.getElementById('cameraSettings'),
+                    document.getElementById('audioSettings'),
+                    document.getElementById('audioDropdown'),
+                    'camera')"
+                  >
+                    Camera Settings<img
+                      class="nextIcon"
+                      src="./assets/img/next.png"
+                      alt="next"
+                    />
+                  </p>
+                  <div id="cameraDropdown" class="settingsDropdown noDropdown">
+                    <ul>
+                      <li>
+                        Webcam<input
+                          id="1"
+                          type="radio"
+                          name="webcam"
+                          value="webcam"
+                        />
+                      </li>
+                      <li>
+                        Default-Webcam<input
+                          id="2"
+                          type="radio"
+                          name="webcam"
+                          value="defaultWebcam"
+                        />
+                      </li>
+                      <li>
+                        Preferred-Webcam<input
+                          id="3"
+                          type="radio"
+                          name="wzebcam"
+                          value="preferredWebcam"
+                        />
+                      </li>
+                    </ul>
+                  </div>
                 </div>
                 <div class="left-bottom_items">
                   <img
-                    onclick="switchState(document.getElementById('micIcon'), 'mic')"
+                    onclick="cameraAudioToggleState(document.getElementById('micIcon'), 'mic')"
                     class="onClass"
                     id="micIcon"
-                    src="./assets//img/micOn.png"
+                    src="./assets/img/micOn.png"
                     alt="Mic"
                   />
-                  <p>Audio Settings</p>
+                  <p
+                    class="settingsClass"
+                    id="audioSettings"
+                    onclick="showDropdown(document.getElementById('audioDropdown'),
+                    document.getElementById('audioSettings'),
+                    document.getElementById('cameraSettings'),
+                    document.getElementById('cameraDropdown'),
+                    'mic')"
+                  >
+                    Audio Settings<img
+                      class="nextIcon"
+                      src="./assets//img/next.png"
+                      alt="next"
+                    />
+                  </p>
+                  <div id="audioDropdown" class="settingsDropdown noDropdown">
+                    <ul>
+                      <li>
+                        Audio1<input
+                          type="radio"
+                          id="4"
+                          name="audio"
+                          value="audio1"
+                        />
+                      </li>
+                      <li>
+                        Audio2<input
+                          type="radio"
+                          id="5"
+                          name="audio"
+                          value="audio2"
+                        />
+                      </li>
+                      <li>
+                        Audio3<input
+                          type="radio"
+                          id="6"
+                          name="audio"
+                          value="audio3"
+                        />
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
@@ -74,7 +156,7 @@
                     >Password<br />
                     <input
                       type="password"
-                      placeholder="Please enter your password(if you've one!)"
+                      placeholder="Please enter your password (if you've one!)"
                     />
                   </label>
                   <button type="submit" id="form-button">Start Meeting</button>

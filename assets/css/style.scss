@@ -7,6 +7,18 @@ html {
   width: 100%;
   height: 100%;
   font-family: "Inter", sans-serif;
+  overflow: hidden;
+}
+
+input:focus {
+  outline: none;
+}
+
+ul,
+li,
+a {
+  list-style: none;
+  text-decoration: none;
 }
 
 #main {
@@ -34,21 +46,22 @@ html {
               border-radius: 50%;
               background: $bgColor-medium1;
               margin: 11.6%;
+              object-fit: cover;
             }
           }
           .left-bottom {
             display: flex;
             justify-content: space-around;
-            padding: 1vw 21% 1vw 27%;
+            padding: 1vw 16% 1vw 22%;
             margin: 0 auto;
             position: relative;
             background: $bgColor-medium1;
             .left-bottom_items {
               display: flex;
               cursor: pointer;
+              position: relative;
               img {
                 margin-right: 0.5vw;
-                height: 28px;
                 height: 28px;
               }
               p {
@@ -57,6 +70,30 @@ html {
                 align-items: center;
                 font-size: 0.9vw;
                 font-weight: 400;
+                vertical-align: middle;
+                line-height: 0;
+                .nextIcon {
+                  height: 8px;
+                  margin-left: 4px;
+                }
+              }
+              .settingsDropdown {
+                position: absolute;
+                top: 6.5vh;
+                left: 0;
+                border-radius: 6px;
+                padding: 1vw;
+                background: $bgColor-medium2;
+                color: $fontColor-gray3;
+                font-size: 0.9vw;
+                width: 100%;
+                ul {
+                  li {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 1%;
+                  }
+                }
               }
             }
           }
@@ -133,7 +170,7 @@ html {
   }
 }
 
-.displayNone {
+.noDropdown {
   display: none;
 }
 
@@ -152,22 +189,34 @@ html {
       margin-top: 2vh;
     }
     .left {
-      height: 40vh;
       .left-bottom {
-        padding: 1.5vw 15% 1.5vw 15% !important;
+        padding: 1.5vw 3% 1.5vw 3% !important;
         .left-bottom_items {
+          img {
+            height: 20px !important;
+            margin-right: 2vw !important;
+          }
           p {
             font-size: 3vw !important;
+            .nextIcon {
+              height: 8px !important;
+            }
+          }
+          .settingsDropdown {
+            font-size: 2.5vw !important;
           }
         }
       }
     }
     .right {
-      margin-top: 9vh;
+      margin-top: 3vh;
+      .right-container {
+        width: 100% !important;
+      }
       .right-header {
         text-align: center;
         h2 {
-          font-size: 1.5em !important;
+          font-size: 1.9em !important;
         }
         p {
           font-size: 0.6em !important;
@@ -177,6 +226,9 @@ html {
       .right-body {
         margin-top: 1vh !important;
         form {
+          label {
+            font-size: 3vw;
+          }
           input {
             margin-bottom: 0.1vh !important;
             margin-top: 0.1vh !important;
