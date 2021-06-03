@@ -5,7 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Huddle01 Assignment</title>
-    <link rel="stylesheet" href="./assets//css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
     <div id="main">
@@ -20,23 +25,29 @@
           <div class="left">
             <div class="left-container">
               <div class="video-placeholder">
-                <div></div>
+
+                  <video id="video" autoplay></video>
+
               </div>
               <div class="left-bottom">
                 <div class="left-bottom_items">
                   <img
-                    src="https://beta.huddle01.com/static/media/VideoOn.4fc76b20.svg"
+                    onclick="switchState(document.getElementById('cameraIcon'), 'video')"
+                    class="onClass"
+                    id="cameraIcon"
+                    src="./assets/img/videoOn.png"
                     alt="camera"
                   />
-
                   <p>Camera Settings</p>
                 </div>
                 <div class="left-bottom_items">
                   <img
-                    src="https://beta.huddle01.com/static/media/MicOn.d3732787.svg"
-                    alt="camera"
+                    onclick="switchState(document.getElementById('micIcon'), 'mic')"
+                    class="onClass"
+                    id="micIcon"
+                    src="./assets//img/micOn.png"
+                    alt="Mic"
                   />
-
                   <p>Audio Settings</p>
                 </div>
               </div>
@@ -49,15 +60,24 @@
                 <p>Review how your audio and video works in calls</p>
               </div>
               <div class="right-body">
-                <form>
-                  <label for="name">Your Name*
-                  <input name="name" type="text" placeholder="Please enter your name"><br />
+                <form onsubmit="return submitForm();">
+                  <label for="name"
+                    >Your Name*
+                    <input
+                      name="name"
+                      type="text"
+                      placeholder="Please enter your name"
+                    /><br />
                   </label>
                   <br />
-                  <label for="password">Password<br />
-                  <input type="password" placeholder="Please enter your password(if you've one!)">
+                  <label for="password"
+                    >Password<br />
+                    <input
+                      type="password"
+                      placeholder="Please enter your password(if you've one!)"
+                    />
                   </label>
-                  <button>Start Meeting</button>
+                  <button type="submit" id="form-button">Start Meeting</button>
                 </form>
               </div>
             </div>
@@ -65,5 +85,6 @@
         </div>
       </div>
     </div>
+    <script src="./assets/js/main.js"></script>
   </body>
 </html>

@@ -6,6 +6,7 @@ body,
 html {
   width: 100%;
   height: 100%;
+  font-family: "Inter", sans-serif;
 }
 
 #main {
@@ -15,7 +16,7 @@ html {
     padding: 4vw 6vw;
     .box {
       margin-top: 9vh;
-      height: 40vh;
+      // height: 40vh;
       display: flex;
       justify-content: space-between;
       .left {
@@ -23,17 +24,16 @@ html {
         .left-container {
           background: $bgColor-medium;
           width: 100%;
-          height: 100%;
           .video-placeholder {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100%;
-            div {
+            video {
               width: 21vh;
               height: 21vh;
               border-radius: 50%;
               background: $bgColor-medium1;
+              margin: 11.6%;
             }
           }
           .left-bottom {
@@ -47,16 +47,16 @@ html {
               display: flex;
               cursor: pointer;
               img {
-                padding: 0.2vw;
                 margin-right: 0.5vw;
-                border: 1.5px solid #9333d6;
-                border-radius: 3px;
+                height: 28px;
+                height: 28px;
               }
               p {
-                color: $fontColor-gray;
+                color: $fontColor-gray2;
                 display: flex;
                 align-items: center;
                 font-size: 0.9vw;
+                font-weight: 400;
               }
             }
           }
@@ -66,29 +66,41 @@ html {
         width: 46%;
         .right-container {
           margin: 0 auto;
+          width: 80%;
           .right-header {
             h2 {
-              background: -webkit-linear-gradient(#303af9, #cd2ec2);
+              text-align: center;
+              text-shadow: 0px 0px 64px rgba(255, 255, 255, 0.32);
+              background: linear-gradient(
+                to right,
+                #f37777 10%,
+                #b182ff 30%,
+                #497de2 100%
+              );
               -webkit-background-clip: text;
               -webkit-text-fill-color: transparent;
-              font-size: 2em;
+              font: {
+                size: 3.3vw;
+              }
             }
             p {
+              font-style: normal;
+              font-size: 1.1vw;
+              line-height: 15px;
               color: $fontColor-gray;
-              font-size: 0.9em;
-              text-align: left;
+              text-align: center;
             }
           }
           .right-body {
             margin-top: 4vh;
             form {
               label {
-                color: $fontColor-gray;
+                color: $fontColor-light;
               }
               input {
-                color: $fontColor-light;
+                color: $fontColor-gray1;
                 margin-bottom: 1vh;
-                margin-top: 0.6vh;
+                margin-top: 0.8vh;
                 width: 95%;
                 padding: 1vw;
                 border-radius: 5px;
@@ -96,13 +108,20 @@ html {
                 background: $bgColor-medium1;
               }
               button {
-                background-image: linear-gradient(to right, #303af9, #cd2ec2);
+                cursor: pointer;
+                background: linear-gradient(
+                  107.72deg,
+                  #1a26c8 -54.49%,
+                  #243cff 17.32%,
+                  #d62ec0 86.99%,
+                  #f37777 151.29%
+                );
                 border: none;
                 padding: 1vw;
                 width: 100%;
-                border-radius: 5px;
+                border-radius: 8px;
                 margin-top: 4vh;
-                color: $fontColor-light;
+                color: #ffffff;
                 font-weight: 500;
                 font-size: 1vw;
               }
@@ -112,6 +131,10 @@ html {
       }
     }
   }
+}
+
+.displayNone {
+  display: none;
 }
 
 @media only screen and (max-width: 720px) {
